@@ -1,0 +1,17 @@
+<html ng-app="">
+
+<head>
+    <script src="angular.js"></script>
+</head>
+
+<body>
+    <input type="text" ng-model="filtro"> 
+    <br>
+    <div ng-init="products=['pera','naranjas','manzanas','uva','manzanas1']">
+    	<ul>
+     <li ng-repeat="product in products |filter:filtro ">{{product | lowercase}}</li>
+    	</ul>
+    </div>
+</body>
+
+</html>

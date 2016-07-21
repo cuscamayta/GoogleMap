@@ -1,0 +1,44 @@
+<html ng-app="unibethApp">
+
+<head>
+    <script src="angular.js"></script>
+</head>
+
+<body>
+    <span>
+    <ul>
+        <li><a href="#/pagina1">Pagina 1</a></li>
+        <li><a href="#/pagina2">Pagina 2</a></li>
+    </ul>
+<div ng-view>
+    <!-- aca dentro se cargaran las paginas -->
+</div>
+
+
+</span>
+</body>
+
+</html>
+<script>
+var app = angular.module('unibethApp', []);
+
+app.config(function($routeProvider) {
+    $routeProvider
+        .when('/pagina1', {
+            controller: 'controllerTest',
+            templateUrl: 'partials/pagina1.html'
+        })
+        .when('/pagina2', {
+            controller: 'controllerTest',
+            templateUrl: 'partials/pagina2.html'
+        })
+        .otherwise({
+            redirectTo: '/pagina1'
+        });
+});
+
+
+app.controller('controllerTest', function($scope) {
+    $scope.mensaje = "hola mundo desde angularJS";
+})
+</script>

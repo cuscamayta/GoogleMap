@@ -1,0 +1,41 @@
+<html ng-app="unibethApp">
+
+<head>
+    <script src="angular.js"></script>
+</head>
+
+
+<body>
+
+<div ng-controller='controllerTest'>
+    
+<span papo></span>
+
+</div>
+    
+</body>
+
+</html>
+<script>
+var app = angular.module('unibethApp', []);
+
+app.controller('controllerTest',function($scope){
+    $scope.mensaje='test';
+})
+// A=> ATRIBUTO
+// E=> ELEMENTO
+// C=> CLASE
+// M=> COMENTARIO
+
+app.directive('papo',function(){
+    return{
+        restrict:'A',
+        template:'<div >este es el div del papo chapo</div>',
+        link:function(scope,element,attrib){
+
+        }
+    }
+})
+
+
+</script>

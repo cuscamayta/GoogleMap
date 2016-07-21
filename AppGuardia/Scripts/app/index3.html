@@ -1,0 +1,37 @@
+<html ng-app="unibethApp">
+
+<head>
+    <script src="angular.js"></script>
+</head>
+<style type="text/css">
+div {
+    height: 150px;
+    width: 100%;        
+    margin-bottom: 10px;
+    border:solid red 1px;
+}
+</style>
+
+<body>
+    <div ng-controller='controllerTest'>
+        
+        div1- {{mensaje}}
+    </div>
+    <div ng-controller='controllerPersona'>
+        
+        div2- {{nombre}}
+    </div>
+</body>
+
+</html>
+<script>
+var app = angular.module('unibethApp', []);
+
+app.controller('controllerTest', function($scope) {
+    $scope.mensaje = "hola mundo desde angularJS";
+})
+
+app.controller('controllerPersona',function($scope){
+	$scope.nombre='delfor';
+})
+</script>

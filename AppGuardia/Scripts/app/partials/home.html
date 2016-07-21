@@ -1,0 +1,80 @@
+﻿<ul id="nav-mobile" class="side-nav fixed " style="transform: translateX(0%);">
+    <li class="logo"><a id="logo-container" href="http://materializecss.com/" class="brand-logo">
+        <img src="/Scripts/app/libs/img/imglogo.jpg" id="front-page-logo"></a>
+    </li>
+    <li class="search">
+        <div class="search-wrapper card">
+            <input id="search"><i class="material-icons">search</i>
+            <div class="search-results"></div>
+        </div>
+
+    </li>
+    <li class=" select-wrapper container">
+        <div class="input-field ">
+            <select>
+                <option value="" disabled selected>Elija Opcion</option>
+                <option value="1">Universidad</option>
+                <option value="2">Colegios</option>
+                <option value="3">Restaurantes</option>
+                <option value="3">Parques Urbanos</option>
+                <option value="3">Hospitales</option>
+                <option value="3">Ginnacios</option>
+            </select>
+        </div>
+    </li>
+
+    <li>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div id="form-login">
+                        <form action="proceso/RegEmpresa.php" class="col s12" method="post">
+                            <div class="row">
+                                <div class="col s12 #a5d6a7 green lighten-3">
+                                    <h6 class="center login-title">Registrar Empresa</h6>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <label for="name">Nombre Empresa</label>
+                                    <input type="text" name="nombreEmpresa" id="nombreEmpresa" ng-model="empresa.Nombre" value="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <label for="email">Correo</label>
+                                    <input type="email" name="email" id="email" value="" ng-model="empresa.Email">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <label for="password">Contrase&ntilde;a</label>
+                                    <input type="password" name="clave" id="clave" value="" ng-model="empresa.Clave">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select name="idTPEmpresa" ng-model="empresa.TipoEmpresa">
+                                        <option value="" disabled selected>Tipo</option>
+                                        <option value="1">Universidad</option>
+                                        <option value="2">Colegios</option>
+                                        <option value="3">Restaurantes</option>
+                                        <option value="3">Parques Urbanos</option>
+                                        <option value="3">Hospitales</option>
+                                        <option value="3">Ginnacios</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <input type="button" ng-click="mostrarEmpresa()" class="btn center-align" value="Mostrar">
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
